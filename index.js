@@ -64,7 +64,7 @@ angular.module('app', ['onsen'])
 
 .service('Population', ['$http', function($http) {
   this.get = function(country, year) {
-    return $http.jsonp('http://api.population.io:80/1.0/population/' + year + '/' + country + '/?format=jsonp&callback=JSON_CALLBACK')
+    return $http.jsonp('https://d6wn6bmjj722w.population.io:443/1.0/population/' + year + '/' + country + '/?format=jsonp&callback=JSON_CALLBACK')
       .then(
         function(response) {
           return response.data;
